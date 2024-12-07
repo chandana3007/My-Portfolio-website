@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="index.html" taget="blank"> </a>
+    <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images\phone-background.png.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <h2> hello, I am  Kotapati Sai Chandana</h2> </br>
+                <p>I'm Studying  Btech 4nd year  in Vardhaman college of engineering in computer science and engineering(CSE),
+                     in shamshabad (Hyberabad).Im familiar with c,python,database and java programming languages.
+                     This is My Offical Portfoli Website done by using HTML,CSS,javascriptt languages,
+                     Where i learnt  from my coincent internship.My current goal is to gain the knowledge on web Development and
+                      start my carrer in good and want to gain experience. </p>
+                
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('personal details')">Personal Details</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                     </div>
+        <div class="tab-contents active-tab" id="personal details">
+            <ul>
+                <li><span>Full Name</span><br> Kotapati Sai Chandana</li>
+                <li><span>Mobile Number</span><br> 91+8374227823</li>
+                <li><span>Address</span><br>Chandranyana gutta</li>
+                <li><span>Date Of Birth</span><br>30/01/2004</li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+            <ul>
+                <li><span>2024 - Current</span><br>  SQL Internship at codtech </li>
+                <li><span>2023 </span><br> Training Web app Development</li>
+                <li><span>2022</span><br> Experience in java programing language ,DBMS</li>
+                <li><span>2021</span><br>C language and python programing languages</li>
+                <li><span>2023</span><br> Internship at coincent </li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="education"> 
+            <ul>
+                <li><span>2024</span><br> Present Studying  Btech at Vardhaman engineering COLLEGE</li>
+                <li><span>2019-2021</span><br>Intermediate  from sri chaitanya junior college</li>
+                <li><span>2018</span><br>10th from Satyam International school</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+
+}
+
+
+    
+</script>
+</body>
+<html>

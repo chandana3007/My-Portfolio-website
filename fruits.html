@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Image on Click</title>
+    <style>
+        #myImage {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="showImage()">Show Image</button>
+    <img id="myImage" src="https://via.placeholder.com/300" alt="Sample Image">
+
+    <script>
+        function showImage() {
+            document.getElementById('myImage').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

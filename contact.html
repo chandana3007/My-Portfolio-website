@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+</head> 
+
+<body><div id="contact">
+    <div class="container">
+        <div class="row">
+           <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                Email:<p><i class="fas fa-paper-plane"></i> saichandana3007@gmail.com</p></br>
+                phone no:<p><i class="fas fa-phone-square-alt"></i>91+8374227823</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100095680020945&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                    <a href="://www.snapchat.com/add/chhttpsandana_3007?share_id=NQPeorasr4o&locale=en-GB"><i class="fab fa-snapchat"></i></a>
+                    <a href="https://instagram.com/moonlight__3007?igshid=NGExMmI2YTkyZg=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/sai-chandana-186065241"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images\my cv.doc" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form class ="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn3">submit</button>
+                </form>
+                <spam id="msg"></spam>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script>
+    var tabLinks = document.getElementsByClassName('tab-links');
+    var tabContents = document.getElementsByClassName('tab-contents');
+
+    function openTab(tabName) {
+        for (tabLink of tabLinks) {
+            tabLink.classList.remove('active-link');
+        }
+        for (tabContent of tabContents) {
+            tabContent.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add('active-link');
+        document.getElementById(tabName).classList.add('active-tab');
+    }
+</script>
+<script>
+var sidememu =document.getElementById("sidememu");
+
+    function openmemu(){
+        sidememu.style.right = "0";
+    }
+    function openmemu(){
+        sidememu.style.right = "-200px";
+    }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby_AXTXHPPRD640M_pOEQw-FYBuvZrQvUjqjcgrKicKwGpw7EEP-gALr9m0E0BTq0FM/exec'
+    const form =document.forms['submit-to-google-sheet']
+
+    form.addEventListerner('submit', e => {
+       e.preventDefault()
+       fetech(scriptURL, { method: 'POST',body: new FormData(form)})
+       .then(response => console.log('success!',response))
+       .catch(error => console.error(' Error', error.message))
+     }) 
+    </script>
+</body>
+</html>
